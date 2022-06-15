@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='CoreDataDemoUITests.xctest' tests='14' failures='0'>
+  <testsuite name='CoreDataDemoTests.CoreDataDemoTests' tests='2' failures='0'>
+    <testcase classname='CoreDataDemoTests.CoreDataDemoTests' name='testExample' time='0.001'/>
+    <testcase classname='CoreDataDemoTests.CoreDataDemoTests' name='testPerformanceExample' time='0.341'/>
+  </testsuite>
+  <testsuite name='CoreDataDemoUITests.AddContactAgeTextFieldTests' tests='1' failures='0'>
+    <testcase classname='CoreDataDemoUITests.AddContactAgeTextFieldTests' name='testTypingCharactersShowsError' time='4.701'/>
+  </testsuite>
+  <testsuite name='CoreDataDemoUITests.AddContactGenderTextFieldTests' tests='1' failures='0'>
+    <testcase classname='CoreDataDemoUITests.AddContactGenderTextFieldTests' name='testTypingEmptyGenderShowsError' time='4.586'/>
+  </testsuite>
+  <testsuite name='CoreDataDemoUITests.AddContactInitialStateTests' tests='1' failures='0'>
+    <testcase classname='CoreDataDemoUITests.AddContactInitialStateTests' name='testNavigationBarHasTitle' time='2.718'/>
+  </testsuite>
+  <testsuite name='CoreDataDemoUITests.AddContactNameFieldTests' tests='1' failures='0'>
+    <testcase classname='CoreDataDemoUITests.AddContactNameFieldTests' name='testErrorLabelIsEmptyAfterTypingName' time='4.110'/>
+  </testsuite>
+  <testsuite name='CoreDataDemoUITests.AddContactValidationErrorTests' tests='1' failures='0'>
+    <testcase classname='CoreDataDemoUITests.AddContactValidationErrorTests' name='testSavingEmptyContactGeneratesErrorMessageWithProperTitle' time='4.252'/>
+  </testsuite>
+  <testsuite name='CoreDataDemoUITests.ContactListTests' tests='6' failures='0'>
+    <testcase classname='CoreDataDemoUITests.ContactListTests' name='testAddContactButtonOpensForm' time='2.862'/>
+    <testcase classname='CoreDataDemoUITests.ContactListTests' name='testAddedSecondContactIsAddedAtTheEndOfList' time='8.283'/>
+    <testcase classname='CoreDataDemoUITests.ContactListTests' name='testAfterCancelingAddContactFormContactIsNotAdded' time='5.247'/>
+    <testcase classname='CoreDataDemoUITests.ContactListTests' name='testAfterDeletingContactIsNotAvailableOnList' time='8.372'/>
+    <testcase classname='CoreDataDemoUITests.ContactListTests' name='testAfterSavingContactIsVisibleOnList' time='5.543'/>
+    <testcase classname='CoreDataDemoUITests.ContactListTests' name='testEmptyListHasZeroContacts' time='2.600'/>
+  </testsuite>
+  <testsuite name='CoreDataDemoUITests.EditContactInitialStateTests' tests='1' failures='0'>
+    <testcase classname='CoreDataDemoUITests.EditContactInitialStateTests' name='test' time='9.018'/>
+  </testsuite>
+</testsuites>
