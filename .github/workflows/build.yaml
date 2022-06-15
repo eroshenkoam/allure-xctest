@@ -21,10 +21,7 @@ jobs:
         run: |
           wget https://github.com/eroshenkoam/xcresults/releases/download/1.11.0/xcresults -O ./xcresults && chmod +x ./xcresults
           ./xcresults export output/report.xcresult output/allure-results
-      - name: Generate report
-        uses: simple-elf/allure-report-action@master
-        if: always()
+      - uses: actions/upload-artifact@v3
         with:
-          allure_results: output/allure-results
-          allure_report: allure-report
-          gh_pages: gh-pages
+          name: allure-results
+          path: output/allure-results
