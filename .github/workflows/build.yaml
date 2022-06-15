@@ -13,5 +13,11 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
-      - name: "Build"
+      - name: "Run tests"
         run: fastlane tests
+      - name: "Copy results"
+        run: cp -r output/*.xcresult output/report.xcresult
+      - name: "Generate Allure"
+        run: |
+          wget https://github.com/eroshenkoam/xcresults/releases/download/1.11.0/xcresults -O ./xcresults && chmod +x ./xcresults
+          ./xcresult export output/report.xcresult output/allure-results
