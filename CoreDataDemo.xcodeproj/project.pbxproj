@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AAE4274151B7D0EE254FAC97 /* build.yaml in Resources */ = {isa = PBXBuildFile; fileRef = AAE42A2562BB2C4F7D269E41 /* build.yaml */; };
 		AAE427C27E68B7CCE5CAF637 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = AAE42BA0EAB4FD5CFCA66412 /* .gitignore */; };
 		F731B9782842491200373813 /* BaseScreen+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F731B9772842491200373813 /* BaseScreen+Extenstions.swift */; };
 		F74A770128268D46004D81CB /* AddContactAgeTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74A770028268D46004D81CB /* AddContactAgeTextFieldTests.swift */; };
@@ -56,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AAE42A2562BB2C4F7D269E41 /* build.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; name = build.yaml; path = .github/workflows/build.yaml; sourceTree = "<group>"; };
 		AAE42BA0EAB4FD5CFCA66412 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
 		F731B9772842491200373813 /* BaseScreen+Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "BaseScreen+Extenstions.swift"; path = "CoreDataDemoUITests/Tests/EditContactTests/BaseScreen+Extenstions.swift"; sourceTree = SOURCE_ROOT; };
 		F74A770028268D46004D81CB /* AddContactAgeTextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactAgeTextFieldTests.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				F784175326EB289C001553D7 /* CoreDataDemoUITests */,
 				F784172D26EB2899001553D7 /* Products */,
 				AAE42BA0EAB4FD5CFCA66412 /* .gitignore */,
+				AAE42A2562BB2C4F7D269E41 /* build.yaml */,
 			);
 			sourceTree = "<group>";
 		};
@@ -387,6 +390,7 @@
 				F784173C26EB289C001553D7 /* Assets.xcassets in Resources */,
 				F784173726EB2899001553D7 /* Main.storyboard in Resources */,
 				AAE427C27E68B7CCE5CAF637 /* .gitignore in Resources */,
+				AAE4274151B7D0EE254FAC97 /* build.yaml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
