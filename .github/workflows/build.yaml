@@ -20,4 +20,4 @@ jobs:
       - name: "Generate Allure"
         run: |
           wget https://github.com/eroshenkoam/xcresults/releases/download/1.11.0/xcresults -O ./xcresults && chmod +x ./xcresults
-          ./xcresult export output/report.xcresult output/allure-results
+          ./xcresults export output/report.xcresult output/allure-results
