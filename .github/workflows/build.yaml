@@ -18,4 +18,4 @@ jobs:
       - name: "Build for testing"
         run: fastlane build
       - name: "Run unit tests"
-        run: marathon run -m Marathonfile-unit
+        run: marathon run -m Marathonfile-unit.yaml
