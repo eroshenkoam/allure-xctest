@@ -3,7 +3,7 @@
   "tests": [
     {
       "id": "10",
-      "selector": "AddContactValidationErrorTests/testSavingEmptyContactGeneratesErrorMessageWithProperTitle()"
+      "selector": "CoreDataDemoUITests.AddContactValidationErrorTests#testSavingEmptyContactGeneratesErrorMessageWithProperTitle"
     }
   ]
 }
