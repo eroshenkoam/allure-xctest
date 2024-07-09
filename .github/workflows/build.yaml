@@ -17,5 +17,5 @@ jobs:
         run: brew install malinskiy/tap/marathon
       - name: "Build for testing"
         run: fastlane build
-      - name: "Run unit tests"
-        run: marathon run -m Marathonfile-unit.yaml
+      - name: "Run ui tests"
+        run: marathon run -m Marathonfile-ui.yaml
