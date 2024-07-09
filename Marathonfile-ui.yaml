@@ -10,7 +10,7 @@ vendorConfiguration:
   pull: true
 filteringConfiguration:
  allowlist:
- - type: "annotation"
+ - type: "fully-qualified-test-name"
    values:
-   - "CoreDataDemoUITests.AddContactValidationErrorTests#testSavingEmptyContactGeneratesErrorMessageWithProperTitle"
+   - "CoreDataDemoUITests.ContactListTests#testAddContactButtonOpensForm"
 debug: true
