@@ -21,7 +21,7 @@ jobs:
         run: marathon run -m Marathonfile-ui.yaml
         timeout-minutes: 7
         env:
-          ALLURE_TESTPLAN_PATH: ${GITHUB_WORKSPACE}/allure/testplan.json
+          ALLURE_TESTPLAN_PATH: "./allure/testplan.json"
       - uses: actions/upload-artifact@v3
         if: always()
         with:

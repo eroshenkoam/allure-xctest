@@ -10,7 +10,5 @@ vendorConfiguration:
   pull: true
 filteringConfiguration:
  allowlist:
- - type: "fully-qualified-test-name"
-   values:
-   - "CoreDataDemoUITests.ContactListTests#testAddContactButtonOpensForm"
+ - type: "allure"
 debug: true
