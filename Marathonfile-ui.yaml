@@ -8,4 +8,7 @@ vendorConfiguration:
   testType: xcuitest
  xcresult:
   pull: true
+filteringConfiguration:
+ allowlist:
+  - type: "allure"
 debug: true
