@@ -18,5 +18,4 @@ jobs:
       - name: "Build for testing"
         run: fastlane build
       - name: "Run unit tests"
-        if: false # Needs latest marathon 0.10.2
         run: marathon run -m Marathonfile-unit
