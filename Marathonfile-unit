@@ -1,0 +1,11 @@
+name: "iOS xctest"
+ outputDir: "output/marathon-unitTest"
+ debug: true
+ vendorConfiguration:
+   type: "iOS"
+   bundle:
+     application: ./derived_data/Build/Products/Debug-iphonesimulator/CoreDataDemo.app
+     testApplication: ./derived_data/Build/Products/Debug-iphonesimulator/CoreDataDemo.app/PlugIns/CoreDataDemoTests.xctest
+     testType: xctest
+   xcresult:
+     pull: true

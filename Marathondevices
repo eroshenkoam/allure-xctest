@@ -1,0 +1,6 @@
+rkers:
+   - transport:
+       type: local
+     devices:
+       - type: simulatorProfile
+         deviceType: com.apple.CoreSimulator.SimDeviceType.iPhone-15

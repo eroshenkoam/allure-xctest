@@ -1,0 +1,11 @@
+name: "iOS xcuitest"
+ outputDir: "output/marathon-uiTests"
+ debug: true
+ vendorConfiguration:
+   type: "iOS"
+   bundle:
+     application: ./derived_data/Build/Products/Debug-iphonesimulator/CoreDataDemo.app
+     testApplication: ./derived_data/Build/Products/Debug-iphonesimulator/CoreDataDemoUITests-Runner.app
+     testType: xcuitest
+   xcresult:
+     pull: true

@@ -13,36 +13,10 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
-      - name: "Run tests"
-        run: fastlane tests
-      - name: "Copy results"
-        run: cp -r output/*.xcresult output/report.xcresult
-      - name: "Generate Allure"
-        run: |
-          wget https://github.com/eroshenkoam/xcresults/releases/download/1.11.0/xcresults -O ./xcresults && chmod +x ./xcresults
-          ./xcresults export output/report.xcresult output/allure-results
-      - uses: actions/upload-artifact@v3
-        with:
-          name: allure-results
-          path: output/allure-results
-      - name: Load test report history
-        uses: actions/checkout@v3
-        if: always()
-        continue-on-error: true
-        with:
-          ref: gh-pages
-          path: gh-pages
-      - name: Build test report
-        uses: simple-elf/allure-report-action@v1.7
-        if: always()
-        with:
-          gh_pages: gh-pages
-          allure_history: allure-history
-          allure_results: build/allure-results
-      - name: Publish test report
-        uses: peaceiris/actions-gh-pages@v3
-        if: always()
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: allure-history
+      - name: "Install marathon test runner"
+        run: brew install malinskiy/tap/marathon
+      - name: "Build for testing"
+        run: fastlane build
+      - name: "Run unit tests"
+        if: false # Needs latest marathon 0.10.2
+        run: marathon run -m Marathonfile-unit
