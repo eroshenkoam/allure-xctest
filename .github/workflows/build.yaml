@@ -19,3 +19,8 @@ jobs:
         run: fastlane build
       - name: "Run ui tests"
         run: marathon run -m Marathonfile-ui.yaml
+        timeout-minutes: 5
+      - uses: actions/upload-artifact@v3
+        with:
+          name: output
+          path: output
