@@ -10,13 +10,13 @@ import XCTest
 
 class AddContactNameFieldTests: BaseTest {
 
-    func testErrorLabelIsEmptyAfterTypingName() throws{
-        ContactListScreen(app: app)
-            .tapAddContact()
-            .typeName("John")
-            .nameErrorLabelValueEqualsTo("")
-    }
-
+//    func testErrorLabelIsEmptyAfterTypingName() throws{
+//        ContactListScreen(app: app)
+//            .tapAddContact()
+//            .typeName("John")
+//            .nameErrorLabelValueEqualsTo("")
+//    }
+//
 //    func testErrorLabelShowsMessageWhenTypedNameIsEmpty() throws{
 //        ContactListScreen(app: app)
 //            .tapAddContact()

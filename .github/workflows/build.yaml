@@ -20,8 +20,6 @@ jobs:
       - name: "Run ui tests"
         run: marathon run -m Marathonfile-ui.yaml
         timeout-minutes: 7
-        env:
-          ALLURE_TESTPLAN_PATH: "./allure/testplan.json"
       - uses: actions/upload-artifact@v3
         if: always()
         with:
