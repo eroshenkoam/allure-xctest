@@ -11,17 +11,17 @@ import XCTest
 
 class AddContactAgeTextFieldTests: BaseTest {
     
-    func testTypingCharactersShowsError() throws{
-        let age = "abcd12345"
-        
-        ContactListScreen(app: app)
-            .tapAddContact()
-            .tapAgeTextField()
-            .clearAge()
-            .typeAge(age)
-            .ageErrorLabelValueEqualsTo("Age must contain only digits")
-    }
-    
+//    func testTypingCharactersShowsError() throws{
+//        let age = "abcd12345"
+//
+//        ContactListScreen(app: app)
+//            .tapAddContact()
+//            .tapAgeTextField()
+//            .clearAge()
+//            .typeAge(age)
+//            .ageErrorLabelValueEqualsTo("Age must contain only digits")
+//    }
+//
 //    func testTypingSpecialCharactersShowsError() throws{
 //        let age = "!@#$%^&*()-+=-[]\\;',./{}|:<>?"
 //

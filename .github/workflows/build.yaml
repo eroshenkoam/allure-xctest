@@ -13,15 +13,17 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
-      - name: "Run tests"
-        run: fastlane tests
-      - name: "Copy results"
-        run: cp -r output/*.xcresult output/report.xcresult
-      - name: "Generate Allure"
-        run: |
-          wget https://github.com/eroshenkoam/xcresults/releases/download/1.11.0/xcresults -O ./xcresults && chmod +x ./xcresults
-          ./xcresults export output/report.xcresult output/allure-results
+      - name: "Install marathon test runner"
+        run: brew install malinskiy/tap/marathon
+      - name: "Build for testing"
+        run: fastlane build
+      - name: "Run ui tests"
+        run: marathon run -m Marathonfile-ui.yaml
+        timeout-minutes: 7
+        env:
+          ALLURE_TESTPLAN_PATH: "./allure/testplan.json"
       - uses: actions/upload-artifact@v3
+        if: always()
         with:
-          name: allure-results
-          path: output/allure-results
+          name: output
+          path: output

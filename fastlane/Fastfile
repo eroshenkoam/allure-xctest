@@ -26,4 +26,15 @@ platform :ios do
     artifacts << Actions.lane_context[SharedValues::SCAN_GENERATED_XCRESULT_PATH] if Actions.lane_context[SharedValues::SCAN_GENERATED_XCRESULT_PATH]
     copy_artifacts(artifacts: artifacts, target_path: "output")
   end
+
+  desc "Build for UI tests"
+     lane :build do
+       scan(
+         workspace: "CoreDataDemo.xcodeproj/project.xcworkspace",
+         scheme: "Debug",
+         skip_build: false,
+         derived_data_path: "derived_data",
+         build_for_testing: true
+       )
+     end
 end

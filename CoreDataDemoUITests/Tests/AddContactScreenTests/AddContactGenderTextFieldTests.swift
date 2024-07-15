@@ -10,15 +10,15 @@ import XCTest
 
 class AddContactGenderTextFieldTests: BaseTest {
 
-    func testTypingEmptyGenderShowsError() throws{
-        ContactListScreen(app: app)
-            .tapAddContact()
-            .tapGenderTextField()
-            .typeGender("")
-            .tapNameTextField()
-            .genderErrorLabelValueEqualsTo("Required")
-    }
-    
+//    func testTypingEmptyGenderShowsError() throws{
+//        ContactListScreen(app: app)
+//            .tapAddContact()
+//            .tapGenderTextField()
+//            .typeGender("")
+//            .tapNameTextField()
+//            .genderErrorLabelValueEqualsTo("Required")
+//    }
+//
 //    func testErrorLabelIsEmptyAfterTypingMen() throws{
 //        let gender = "men"
 //

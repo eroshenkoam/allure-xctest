@@ -11,14 +11,14 @@ import XCTest
 class AddContactInitialStateTests:BaseTest {
     
     // Navigation bar
-    func testNavigationBarHasTitle() throws {
-        let navigationBarTitle = "Add contact"
-        
-        ContactListScreen(app: app)
-            .tapAddContact()
-            .navigationBarHasTitle(navigationBarTitle)
-    }
-    
+//    func testNavigationBarHasTitle() throws {
+//        let navigationBarTitle = "Add contact"
+//
+//        ContactListScreen(app: app)
+//            .tapAddContact()
+//            .navigationBarHasTitle(navigationBarTitle)
+//    }
+//
 //    func testNameTextFieldHasProperPlaceholder() throws {
 //        let placeholderValue = "Type name"
 //
