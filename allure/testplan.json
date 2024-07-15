@@ -4,6 +4,10 @@
     {
       "id": "10",
       "selector": "CoreDataDemoUITests.AddContactValidationErrorTests.testSavingEmptyContactGeneratesErrorMessageWithProperTitle"
+    },
+    {
+      "id": "11",
+      "selector": "CoreDataDemoUITests.ContactListTests.testAddContactButtonOpensForm"
     }
   ]
 }
