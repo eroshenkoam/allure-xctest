@@ -8,6 +8,10 @@ vendorConfiguration:
   testType: xcuitest
  xcresult:
   pull: true
+batchingStrategy:
+ type: "fixed-size"
+ size: 10
+ durationMillis: 100000
 filteringConfiguration:
  allowlist:
  - type: "allure"
