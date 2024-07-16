@@ -22,8 +22,12 @@ jobs:
         timeout-minutes: 7
         env:
           ALLURE_TESTPLAN_PATH: "./allure/testplan.json"
+      - run: |
+          wget https://github.com/eroshenkoam/xcresults/actions/runs/9958319481/artifacts/1706557891 -o xcresults
+          chmod +x xcresults
+          xcresults export output/marathon-uiTests/device-files/omni/*/xcresult/*.xcresult allure-results
       - uses: actions/upload-artifact@v3
         if: always()
         with:
-          name: output
-          path: output
+          name: allure-results
+          path: allure-results
