@@ -16,6 +16,9 @@ on:
     branches:
       - 'master'
 
+env:
+  ALLURE_JOB_RUN_ID: ${{ github.event.inputs.ALLURE_JOB_RUN_ID }}
+
 jobs:
   build:
     runs-on: macos-latest
