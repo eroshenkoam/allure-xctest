@@ -13,18 +13,17 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: allure-framework/setup-allurectl@v1
+        with:
+          allure-endpoint: ${{ secrets.ALLURE_ENDPOINT }}
+          allure-token: ${{ secrets.ALLURE_TOKEN }}
+          allure-project-id: ${{ secrets.ALLURE_PROJECT_ID }}
       - run: brew install malinskiy/tap/marathon
       - run: fastlane build
-      - run: marathon run -m Marathonfile-ui.yaml
+      - run: allurectl watch -- marathon run -m Marathonfile-ui.yaml
         timeout-minutes: 4
-        env:
-          ALLURE_TESTPLAN_PATH: "./allure/testplan.json"
       - run: |
           chmod +x ./xcresults
           ./xcresults export output/marathon-uiTests/device-files/omni/*/xcresult/*.xcresult allure-results
+          allurectl upload allure-results
         if: always()
-      - uses: actions/upload-artifact@v3
-        if: always()
-        with:
-          name: allure-results
-          path: allure-results
