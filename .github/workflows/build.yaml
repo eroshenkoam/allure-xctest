@@ -16,12 +16,12 @@ jobs:
       - run: brew install malinskiy/tap/marathon
       - run: fastlane build
       - run: marathon run -m Marathonfile-ui.yaml
-        timeout-minutes: 5
+        timeout-minutes: 4
         env:
           ALLURE_TESTPLAN_PATH: "./allure/testplan.json"
       - run: |
-          chmod +x xcresults
-          xcresults export output/marathon-uiTests/device-files/omni/*/xcresult/*.xcresult allure-results
+          chmod +x ./xcresults
+          ./xcresults export output/marathon-uiTests/device-files/omni/*/xcresult/*.xcresult allure-results
         if: always()
       - uses: actions/upload-artifact@v3
         if: always()
