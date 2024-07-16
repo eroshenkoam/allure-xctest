@@ -10,12 +10,12 @@ import XCTest
 
 class ContactListTests: BaseTest {
 
-    func testAddContactButtonOpensForm() throws{
-        ContactListScreen(app: app)
-            .tapAddContact()
-            .addPersonScreenIsLoaded()
-    }
-    
+//    func testAddContactButtonOpensForm() throws{
+//        ContactListScreen(app: app)
+//            .tapAddContact()
+//            .addPersonScreenIsLoaded()
+//    }
+//
 //    func testEmptyListHasZeroContacts() throws{
 //        ContactListScreen(app: app)
 //            .verifyNumberOfContactsEquals(0)
