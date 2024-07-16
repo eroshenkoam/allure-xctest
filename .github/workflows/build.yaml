@@ -20,10 +20,10 @@ jobs:
         env:
           ALLURE_TESTPLAN_PATH: "./allure/testplan.json"
       - run: |
-        if: always()
           wget https://github.com/eroshenkoam/xcresults/actions/runs/9958319481/artifacts/1706557891 -o xcresults
           chmod +x xcresults
           xcresults export output/marathon-uiTests/device-files/omni/*/xcresult/*.xcresult allure-results
+        if: always()
       - uses: actions/upload-artifact@v3
         if: always()
         with:
