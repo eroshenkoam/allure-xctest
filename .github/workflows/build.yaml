@@ -21,7 +21,7 @@ jobs:
       - run: brew install malinskiy/tap/marathon
       - run: fastlane build
       - run: allurectl watch -- marathon run -m Marathonfile-ui.yaml
-        timeout-minutes: 10
+        timeout-minutes: 6
       - run: |
           chmod +x ./xcresults
           ./xcresults export output/marathon-uiTests/device-files/omni/*/xcresult/*.xcresult allure-results
