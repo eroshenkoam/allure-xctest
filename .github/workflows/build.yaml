@@ -1,6 +1,14 @@
 name: Build
 
 on:
+  workflow_dispatch:
+    inputs:
+      ALLURE_JOB_RUN_ID:
+        description: "Inner parameter for Allure TestOps"
+        required: false
+      ALLURE_USERNAME:
+        description: "Inner parameter for Allure TestOps"
+        required: false
   pull_request:
     branches:
       - '*'
