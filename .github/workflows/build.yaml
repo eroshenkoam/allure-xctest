@@ -2,13 +2,6 @@ name: Build
 
 on:
   workflow_dispatch:
-    inputs:
-      ALLURE_JOB_RUN_ID:
-        description: "Inner parameter for Allure TestOps"
-        required: false
-      ALLURE_USERNAME:
-        description: "Inner parameter for Allure TestOps"
-        required: false
   pull_request:
     branches:
       - '*'
@@ -16,25 +9,24 @@ on:
     branches:
       - 'master'
 
-env:
-  ALLURE_JOB_RUN_ID: ${{ github.event.inputs.ALLURE_JOB_RUN_ID }}
-
 jobs:
   build:
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: allure-framework/setup-allurectl@v1
-        with:
-          allure-endpoint: ${{ secrets.ALLURE_ENDPOINT }}
-          allure-token: ${{ secrets.ALLURE_TOKEN }}
-          allure-project-id: ${{ secrets.ALLURE_PROJECT_ID }}
+      - uses: actions/checkout@v4
       - run: brew install malinskiy/tap/marathon
       - run: fastlane build
-      - run: allurectl watch -- marathon run -m Marathonfile-ui.yaml
+      - run: marathon run -m Marathonfile-ui.yaml
         timeout-minutes: 6
       - run: |
           chmod +x ./xcresults
           ./xcresults export output/marathon-uiTests/device-files/omni/*/xcresult/*.xcresult allure-results
-          allurectl upload allure-results
         if: always()
+      - uses: actions/upload-artifact@v4
+        with:
+          name: output.xcresults
+          path: output/marathon-uiTests/device-files/omni/*/xcresult/*.xcresult
+      - uses: actions/upload-artifact@v4
+        with:
+          name: allure-results.zip
+          path: allure-results
