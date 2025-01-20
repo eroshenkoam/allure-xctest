@@ -15,8 +15,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: | 
-          brew uninstall ffmpeg
-          brew reinstall rav1e
           brew install ffmpeg
           brew install malinskiy/tap/marathon
       - run: fastlane build
