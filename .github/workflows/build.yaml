@@ -15,10 +15,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: | 
-          brew install malinskiy/tap/marathon
           brew uninstall ffmpeg
           brew reinstall rav1e
           brew install ffmpeg
+          brew install malinskiy/tap/marathon
       - run: fastlane build
       - run: marathon run -m Marathonfile-ui.yaml || true
         timeout-minutes: 6
