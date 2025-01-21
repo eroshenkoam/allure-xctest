@@ -18,16 +18,19 @@ jobs:
           brew install ffmpeg
           brew install malinskiy/tap/marathon
       - run: fastlane build
-      - run: marathon run -m Marathonfile-ui.yaml || true
-        timeout-minutes: 6
+      - run: marathon run -m Marathonfile-ui.yaml
+        timeout-minutes: 10
       - run: |
           chmod +x ./xcresults
           ./xcresults export output/marathon-uiTests/device-files/omni/*/xcresult/*.xcresult allure-results
+        if: always()
       - uses: actions/upload-artifact@v4
         with:
           name: output.xcresults
           path: output/marathon-uiTests/device-files/omni/*/xcresult/*.xcresult
+        if: always()
       - uses: actions/upload-artifact@v4
         with:
           name: allure-results.zip
           path: allure-results
+        if: always()

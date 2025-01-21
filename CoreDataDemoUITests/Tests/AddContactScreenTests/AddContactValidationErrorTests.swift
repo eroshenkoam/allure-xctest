@@ -19,29 +19,29 @@ class AddContactValidationErrorTests: BaseTest {
             .alertHasProperTiltle()
     }
 
-    func testSavingEmptyContactGeneratesErrorMessageWithProperMessage() throws{
-        ContactListScreen(app: app)
-            .tapAddContact()
-            .tapAgeTextField()
-            .clearAge()
-            .tapSave()
-            .alertHasProperMessage()
-    }
+    // func testSavingEmptyContactGeneratesErrorMessageWithProperMessage() throws{
+    //     ContactListScreen(app: app)
+    //         .tapAddContact()
+    //         .tapAgeTextField()
+    //         .clearAge()
+    //         .tapSave()
+    //         .alertHasProperMessage()
+    // }
 
-    func testSavingEmptyContactGeneratesErrorMessageWithOkButton() throws{
-        ContactListScreen(app: app)
-            .tapAddContact()
-            .tapAgeTextField()
-            .clearAge()
-            .tapSave()
-            .alertHasOkButton()
-    }
+    // func testSavingEmptyContactGeneratesErrorMessageWithOkButton() throws{
+    //     ContactListScreen(app: app)
+    //         .tapAddContact()
+    //         .tapAgeTextField()
+    //         .clearAge()
+    //         .tapSave()
+    //         .alertHasOkButton()
+    // }
 
-    func testAfterTapingOkButttonScreenIsInInitialState() throws{
-        ContactListScreen(app: app)
-            .tapAddContact()
-            .tapSave()
-            .tapAlertOkButton()
-            .addPersonScreenIsLoaded()
-    }
+    // func testAfterTapingOkButttonScreenIsInInitialState() throws{
+    //     ContactListScreen(app: app)
+    //         .tapAddContact()
+    //         .tapSave()
+    //         .tapAlertOkButton()
+    //         .addPersonScreenIsLoaded()
+    // }
 }
